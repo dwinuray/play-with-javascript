@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Javascript</title>
+</head>
+<body>
+    
+    <h2>Let's learn how to create new object</h2>
+    <img src="img/1.png" alt="">
+    <p>
+        Create object with first method <span id="call-me-1" style="font-style: italic;"></span> <br>
+        <code>
+        var typeFirstObject = {
+
+            key : "This is value of key with first object"
+        }; <br>
+        document.getElementById('call-me-1').innerHTML = typeFirstObject.key;
+        </code>
+        
+    </p>
+
+    <p>Create object with second method <span id="call-me-2" style="font-style: italic;"></span>
+        <br>
+        <code>
+            // second object<br>
+            var typeSecondObject = new Object(); <br>
+            typeSecondObject.secondKey = "It's me second key of your object :)";<br>
+            typeSecondObject.thirdKey  = "Whoops you was successfully to call object with brackets";<br>
+            <br>
+            document.getElementById('call-me-2').innerHTML = typeSecondObject.secondKey;
+        </code>
+    </p>
+
+
+    <p>Another type of call object <span id="call-me-3" style="font-style: italic;"></span>
+    
+        <code>
+            // second object<br>
+            document.getElementById('call-me-3').innerHTML = typeSecondObject['thirdKey']; 
+        </code>
+    
+    </p>
+
+
+
+
+
+    <p>Create some function in object <span id="call-me-4" style="font-style: italic;"></span></p>
+    <p>Create some function in object with set value <span id="call-me-5" style="font-style: italic;"></span>
+    
+        <code>
+            <br>
+            // third object :: function <br>
+            var typeThirdObjectWithFunction = { <br>
+
+                name : "Andani", <br>
+                checkInfo : function() {
+
+                    return "His name is " + this.name;
+                },<br>
+                setInfo : function( newName ) {
+
+                    this.name = newName;
+                }<br>
+            };
+        </code>
+    
+    </p>
+
+
+    <script>
+
+        // first object
+        var typeFirstObject = {
+
+            key : "This is value of key with first object"
+        };
+
+
+        // second object
+        var typeSecondObject = new Object();
+        typeSecondObject.secondKey = "It's me second key of your object :)";
+        typeSecondObject.thirdKey  = "Whoops you was successfully to call object with brackets";
+
+
+
+        // third object :: function 
+        var typeThirdObjectWithFunction = {
+
+            name : "Andani",
+            checkInfo : function() {
+
+                return "His name is " + this.name;
+            },
+            setInfo : function( newName ) {
+
+                this.name = newName;
+            }
+        };
+
+        document.getElementById('call-me-1').innerHTML = typeFirstObject.key;
+        document.getElementById('call-me-2').innerHTML = typeSecondObject.secondKey;
+
+        document.getElementById('call-me-3').innerHTML = typeSecondObject['thirdKey']; 
+        
+        
+        
+        document.getElementById('call-me-4').innerHTML = typeThirdObjectWithFunction.checkInfo();
+        
+        // set value
+        typeThirdObjectWithFunction.setInfo("Amelia ofcourse");
+        document.getElementById('call-me-5').innerHTML = typeThirdObjectWithFunction.checkInfo();
+    </script>
+</body>
+</html>
