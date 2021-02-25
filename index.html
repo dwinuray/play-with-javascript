@@ -113,6 +113,22 @@
         // set value
         typeThirdObjectWithFunction.setInfo("Amelia ofcourse");
         document.getElementById('call-me-5').innerHTML = typeThirdObjectWithFunction.checkInfo();
+        
+        
+        /* 
+            lets play with simple functions without jquery, we can create like jquery to bring some event of element but hublaaaa 
+            yeah just pure javascript :)
+        */
+        function $(yourElement){
+            
+            return yourElement.chartAt[0] == "#"
+                ? document.querySelector(getEl);
+                : document.querySelectorAll(getEl);
+        }
+        
+        // test 
+        // $('#call-me-5')
+        
     </script>
 </body>
 </html>
